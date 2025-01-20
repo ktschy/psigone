@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <!-- This is my about page. Interests, basic info... etc! -->
+    <link rel="icon" type="image/x-icon" href="/images/patamon.ico">
+    <title>About</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<style>
+ 
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+ 
+body{
+background-color: #FBFAF0;
+font-family: 'monospace', sans-serif;
+font-size: 12px;
+color: #532635;
+margin: 5%;
+}
+ 
+.container{
+display: flex;
+flex-direction: row;
+gap: 1rem;
+max-width: 800px;
+margin: 0 auto;
+}
+ 
+.imgwrapper{
+display: flex;
+flex-grow: 100;
+flex-basis: 0;
+}
+ 
+.img{
+align-self: center;
+width: 100%;
+min-width: 200px;
+}
+ 
+.main{
+display: flex;
+flex-direction: column;
+flex-grow: 3;
+flex-basis: 0;
+justify-content: space-between;
+gap: 1rem;
+}
+ 
+.box{
+display: flex;
+gap: 1rem;
+}
+ 
+.boximg{
+align-self: center;
+width: 200px;
+}
+ 
+.content{
+flex-grow: 6;
+flex-basis: 0;
+min-width: 220px;
+height: 220px;
+border: 2px solid #5D1838;
+padding: 1rem;
+overflow: scroll;
+overflow-x: hidden;
+text-align: justify;
+line-height: 1.1;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+ 
+.headers{
+font-size: 20px;
+text-align: right;
+font-weight: normal;
+font-family: 'Lucida Sans', sans-serif;
+border-bottom: 2px dotted #5D1838;
+}
+ 
+a{
+text-decoration: none;
+color: #903643;
+}
+ 
+a:visited{
+color: #903643;
+}
+ 
+a:hover{
+font-style: italic;
+}
+ 
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+ 
+::-webkit-scrollbar{
+width: 6px; 
+}
+ 
+::-webkit-scrollbar-track{
+background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb{
+background-color: #5D1838;
+}
+ 
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 0px;
+right: 0;
+}
+ 
+@media(max-width:730px){
+.box img{
+display: none;
+}
+}
+ 
+@media(max-width:515px){
+.container{
+flex-direction: column;
+}
+.img{
+width: 40%;
+min-width: 40%;
+margin: 0 auto;
+}
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+ 
+<!-- LEFT IMAGE -->
+<div class="imgwrapper">
+<img class="img" src="images/angemon.png">
+</div>
+ 
+<div class="main">
+ 
+<!-- BOX 1 -->
+<div class="box">
+<div class="content">
+<h2 class="headers">About</h2>
+<p>Hi! My name is Jean (they/them). I live in the Bay Area in California and made this site to claim my own digital space outside the grasps of social media. I have a lot of interests, but generally I love to draw, paint, and to play tabletop games. I find myself as Game Master a lot, and so a lot of my spare time is dedicated to envisoning new worlds and characters.</p>
+</div>
+<!-- BOX 1 IMAGE -->
+<img class="boximg" src="images/darkmagiciangirl.png">
+</div>
+ 
+<!-- BOX 2 -->
+<div class="box">
+<!-- BOX 2 IMAGE -->
+<img class="boximg" src="">
+<div class="content">
+<h2 class="headers">Tags</h2>
+ <iframe width="314" height="321" scrolling="yes" src="https://gifypet.neocities.org/pet/pet.html?name=greta&amp;dob=1677549307&amp;gender=undefined&amp;element=Fire&amp;pet=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fdigimon%2Fimages%2F7%2F7f%2FAngemon_vg.gif&amp;map=tree.jpg&amp;background=1995.png&amp;tablecolor=white&amp;textcolor=%231643ca" frameborder="0"></iframe>
+      <br>
+      <img src="/images/trainer.png">
+</div>
+</div>
+ 
+ 
+<!-- BOX 3 -->
+<div class="box">
+<div class="content">
+<h2 class="headers">Site Links</h2><p></p>
+</div>
+<!-- BOX 3 IMAGE -->
+<img class="boximg" src="images/togetic.png">
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</body>
+ 
+</html>
