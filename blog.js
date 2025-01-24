@@ -1,7 +1,7 @@
 // Blog posts data
 const blogPosts = [
     { id: "post1", title: "leave it all", date: "2024-12-27", content: "Your post content here..." },
-    { id: "post2", title: "placeholder", date: "2024-12-15", content: "Your post content here..." },
+    { id: "post2", title: "placeholder", date: "2023-12-15", content: "Your post content here..." },
     { id: "post3", title: "goodbyes in july", date: "2022-11-20", content: "Your post content here..." },
     // Add more posts here
 ];

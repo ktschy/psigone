@@ -107,11 +107,11 @@ nav a:hover {
 main {
     flex: 3;
     padding: 20px;
-    background: #212121;
+    background: #6b2880;
     border: 3px solid #ffcc00;
+    text-align: center;
     border-radius: 10px;
     box-sizing: border-box;
-    max-width:fit-content;
     height: calc(100vh - 300px); /* Takes full height minus padding */
     overflow-y: auto; /* Makes the main box scrollable */
     overflow-x: hidden;
