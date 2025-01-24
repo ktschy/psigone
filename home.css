@@ -236,7 +236,7 @@ footer {
 /* Profile Box */
 .profile-box {
     width: 100%;
-    background-color: #212121;
+    background-color: #268f63;
     padding: 15px;
     border: 3px solid #ffcc00;
     border-radius: 10px;
@@ -266,7 +266,7 @@ footer {
 /* Links Box */
 .links-box {
     width: 100%; /* Matches profile box width */
-    background-color: #212121;
+    background-color: #428ebb;
     padding: 15px;
     border: 3px solid #ffcc00;
     border-radius: 10px;
@@ -276,7 +276,7 @@ footer {
 }
 
 .links-box h3 {
-    color: #ffcc00;
+    color: #4228d8;
     margin-bottom: 10px;
     font-size: 1rem;
 }
@@ -292,7 +292,7 @@ footer {
 }
 
 .links-box ul li a {
-    color: #ffcc00;
+    color: #c4216d;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease-in-out;
@@ -305,7 +305,7 @@ footer {
 /* Status Box */
 .status-box {
     width: 100%; /* Matches profile box width */
-    background-color: #212121;
+    background-color: #7aad28;
     padding: 15px;
     border: 3px solid #ffcc00;
     border-radius: 10px;

@@ -1,45 +1,45 @@
 // Character Data
 const characters = [
     {
-        id: "morgana",
+        id: "hieu",
         name: "Hieu, the War Priest",
         image: "images/hieu2.png",
         description: "A foreign-born emissary of peace, corrupted by the horrors in Chult.",
-        details: "Level: 12 | Class: Sorcerer | Alignment: Neutral Good",
-        abilities: "Chrono Surge, Dimensional Door, Arcane Blast",
-        backstory: "Morgana was raised in the Chrono Keep, an ancient fortress where time stands still...",
+        details: "Level: 4 | Class: Cleric | Alignment: Neutral Good",
+        abilities: "Turn Undead, Bless, Inflict Wounds",
+        backstory: "Hieu is a cleric of Eldath, the water bearer...",
         gallery: [
-            "images/morgana-art1.png",
-            "images/morgana-art2.png",
-            "images/morgana-art3.png"
+            "images/hieu2.png",
+            "images/hieu-art2.png",
+            "images/hieu-art3.png"
         ]
     },
     {
-        id: "dante",
+        id: "giles",
         name: "Giles, the Divination Wizard",
         image: "images/giles1.png",
         description: "Hewwo? He's just a little guy!",
-        details: "Level: 8 | Class: Bard | Alignment: Chaotic Neutral",
-        abilities: "Song of Rest, Cutting Words, Bardic Inspiration",
-        backstory: "Dante roams the lands as a wandering minstrel, charming friends and foes alike...",
+        details: "Level: 14 | Class: Wizard | Alignment: Chaotic Good",
+        abilities: "Fireball, Telekinesis, Tasha's Bubbling Cauldron",
+        backstory: "A former familiar, now an accomplished seer...",
         gallery: [
             "images/giles1.png",
-            "images/",
-            "images/dante-art3.png"
+            "images/giles-art2.png",
+            "images/giles-art3.png"
         ]
     },
     {
-        id: "kael",
+        id: "leif",
         name: "Leif, the Vagrant Samurai",
         image: "images/leif1.png",
         description: "He seeks to avenge his family and to end the eternal night.",
-        details: "Level: 10 | Class: Ranger | Alignment: Lawful Good",
-        abilities: "Hunter's Mark, Longshot Precision, Animal Companion",
-        backstory: "Kael's bond to the natural world is unshakable, guided by the spirits of the wild...",
+        details: "Level: 6 | Class: Fighter | Alignment: Lawful Good",
+        abilities: "None",
+        backstory: "Leif's bond to the natural world is unshakable, guided by the spirits of the wild...",
         gallery: [
-            "images/kael-art1.png",
-            "images/kael-art2.png",
-            "images/kael-art3.png"
+            "images/leif-art1.png",
+            "images/leif-art2.png",
+            "images/leif-art3.png"
         ]
     }
 ];
