@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global Styling */
+body {
+    font-family: "Press Start 2P", monospace;
+    background: linear-gradient(90deg, #3b5998, #8b9dc3);
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Layout */
+.page-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+/* Left Navigation */
+nav.left-nav {
+    width: 80px;
+    background-color: #2e7d32;
+    padding: 10px 5px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+}
+
+nav.left-nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px;
+    background: #1a237e;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 0.6rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.left-nav a:hover {
+    background: #ffcc00;
+    color: #1a237e;
+    transform: scale(1.1);
+}
+
+/* Characters Page */
+.characters-page {
+    flex: 1;
+    padding: 20px;
+    background: #212121;
+    border-left: 3px solid #ffcc00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Character Expanded Main Image */
+.characters-page img[alt^="Hieu"], 
+.characters-page img[alt^="Giles"], 
+.characters-page img[alt^="Leif"] {
+    width: 200px; /* Set a consistent width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image */
+    border-radius: 10px; /* Add slight rounding for consistency */
+    border: 3px solid #ffcc00; /* Match other design elements */
+}
+
+.characters-page h1 {
+    font-family: "Press Start 2P", monospace;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Characters Grid */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Character Card */
+.character-card {
+    background: #1a237e;
+    color: #ffffff;
+    padding: 20px;
+    border: 3px solid #ffcc00;
+    border-radius: 15px;
+    transition: transform 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.character-card img {
+    width: 100%; /* Thumbnail size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ffcc00;
+}
+
+.character-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.character-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Expanded Character View */
+.character-expanded {
+    padding: 20px;
+    background: #1a237e;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+}
+
+.character-expanded img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.character-expanded h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .characters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Art Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #1a237e;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: #ffe066;
+}
+

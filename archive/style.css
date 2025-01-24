@@ -1,0 +1,51 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+    background-color: #D7CFC0;
+    background-repeat: repeat;
+    text-align: center;
+    color: #000;
+    min-height: 100%;
+    font-family: monospace;
+  }
+
+html{height: 100%
+  }
+
+h1 {
+    color:#fff;
+    margin-top: 0;
+}
+
+/* Start https://www.cursors-4u.com */ *
+{
+  cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1002.cur), auto !important;}
+/* End https://www.cursors-4u.com */
+
+/* Default styles for desktop */
+#about pre {
+  font-size: 16px; /* Standard size for larger screens */
+  line-height: 1.4; /* Improve readability */
+  overflow: auto; /* Allow scrolling for large text */
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+  #about pre {
+      font-size: 12px; /* Reduce text size for smaller screens */
+      line-height: 1.2;
+  }
+
+  #about img {
+      width: 80%; /* Scale images to fit within mobile screens */
+      height: auto;
+  }
+
+  #about {
+    width: 90%; /* Fit the container within the screen */
+    margin: 0 auto; /* Center the container */
+    padding: 10px;
+  }
+}

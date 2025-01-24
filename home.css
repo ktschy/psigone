@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    background-color: #1a237e; /* Fallback background color */
+    border-bottom: 3px solid #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image scales nicely */
+}
+
+/* Adjust Main Content to Fit Below Banner */
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Global Styling */
+body {
+    font-family: "Press Start 2P", monospace;
+    background: linear-gradient(90deg, #3b5998, #8b9dc3);
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Layout */
+.page-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+/* Left Navigation */
+nav {
+    width: 80px;
+    background-color: #2e7d32;
+    padding: 10px 5px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+}
+
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 10px;
+    background: #1a237e;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 0.6rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: #ffcc00;
+    color: #1a237e;
+    transform: scale(1.1);
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+}
+
+main {
+    flex: 3;
+    padding: 20px;
+    background: #212121;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: calc(100vh - 300px); /* Takes full height minus padding */
+    overflow-y: auto; /* Makes the main box scrollable */
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styling (Optional) */
+main::-webkit-scrollbar {
+    width: 8px;
+}
+main::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    border-radius: 4px;
+}
+main::-webkit-scrollbar-track {
+    background-color: #212121;
+}
+
+.profile-box {
+    width: 180px;
+    background-color: #212121;
+    padding: 15px;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.profile-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    margin-bottom: 10px;
+}
+
+.profile-box h3 {
+    color: #ffcc00;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.profile-box p {
+    font-size: 0.9rem;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1a237e;
+    color: #ffcc00;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        justify-content: center;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    nav a {
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.5rem;
+        line-height: 40px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+}
+
+/* Sidebar Styling (Profile, Links, and Status) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between boxes */
+    width: 180px; /* Matches the profile box width */
+}
+
+/* Profile Box */
+.profile-box {
+    width: 100%;
+    background-color: #212121;
+    padding: 15px;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.profile-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    margin-bottom: 10px;
+}
+
+.profile-box h3 {
+    color: #ffcc00;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.profile-box p {
+    font-size: 0.9rem;
+}
+
+/* Links Box */
+.links-box {
+    width: 100%; /* Matches profile box width */
+    background-color: #212121;
+    padding: 15px;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.links-box h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.links-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-box ul li {
+    margin-bottom: 10px;
+}
+
+.links-box ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.links-box ul li a:hover {
+    color: #ffffff;
+}
+
+/* Status Box */
+.status-box {
+    width: 100%; /* Matches profile box width */
+    background-color: #212121;
+    padding: 15px;
+    border: 3px solid #ffcc00;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.status-box h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.status-box p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%; /* Allow boxes to expand on smaller screens */
+        max-width: 300px; /* Set a max width for better appearance */
+    }
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1019.cur), auto !important;} /* End https://www.cursors-4u.com */

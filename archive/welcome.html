@@ -11,6 +11,10 @@
     <style> 
 body {
     background: url(images/sparklestars.gif);
+    font-family: "Arial", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 .vl {
   border-left: 2px solid grey;height: 150px;
@@ -20,7 +24,7 @@ body {
 }
 
 #update { width: 150px; height: 150px; padding: 3px; }
-#feature, #about, #icon1, #icon2, #icon3, #song, #comments, #list { width: 0px; height: 0px; padding: 3px; text-align:center;}
+#feature, #about, #icon1, #icon2, #icon3, #icon4, #song, #comments, #list { width: 0px; height: 0px; padding: 3px; text-align:center;}
 
 #feature, #about, #comments, #list {overflow:hidden;}
 
@@ -38,16 +42,77 @@ body {
 
 .window {
   overflow:hidden;
+  border: 2px solid #000;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 </style>
+<script>document.querySelectorAll('.window').forEach((element) => {
+  let offsetX = 0, offsetY = 0, startX = 0, startY = 0, isDragging = false;
 
+  // Handle touch and mouse down
+  const startDrag = (event) => {
+      event.preventDefault();
+      isDragging = true;
+
+      const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+      const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+
+      startX = clientX;
+      startY = clientY;
+
+      const rect = element.getBoundingClientRect();
+      offsetX = clientX - rect.left;
+      offsetY = clientY - rect.top;
+  };
+
+  // Handle touch and mouse move
+  const drag = (event) => {
+      if (!isDragging) return;
+
+      const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+      const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+
+      const x = clientX - offsetX;
+      const y = clientY - offsetY;
+
+      element.style.position = 'absolute';
+      element.style.left = `${x}px`;
+      element.style.top = `${y}px`;
+  };
+
+  // Handle touch and mouse up
+  const endDrag = () => {
+      isDragging = false;
+  };
+
+  // Attach event listeners
+  element.addEventListener('mousedown', startDrag);
+  element.addEventListener('mousemove', drag);
+  element.addEventListener('mouseup', endDrag);
+  element.addEventListener('mouseleave', endDrag);
+
+  element.addEventListener('touchstart', startDrag, { passive: false });
+  element.addEventListener('touchmove', drag, { passive: false });
+  element.addEventListener('touchend', endDrag);
+});</script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
   $( function() {
-    $( "#update" ).draggable(); $( "#list" ).draggable(); $( "#icon3" ).draggable(); $( "#icon4").draggable(); $( "#feature" ).draggable(); $( "#about" ).draggable();$( "#icon1" ).draggable(); $( "#icon2" ).draggable();$( "#song" ).draggable();$( "#comments" ).draggable();
+    $("#update, #list, #icon1, #icon2, #icon3, #icon4, #feature, #about, #comments, #song").draggable({
+        containment: "window"
+    });
   } );
+</script>
+<script>
+document.querySelectorAll('.title-bar-controls button').forEach((button) => {
+    button.addEventListener('mousedown', (event) => event.stopPropagation());
+    button.addEventListener('touchstart', (event) => event.stopPropagation());
+});
 </script>
 <script data-goatcounter="https://ktschy.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -62,7 +127,7 @@ body {
  <br>&nbsp;&nbsp;Blog&nbsp;&nbsp;&nbsp;</a></div>
   <div id=icon3 class="moreicon" style="left:50px; top:275px;"><a href="/art"><img src="images\inkscape.png">
  <br>&nbsp;&nbsp;My&nbsp;Art&nbsp;&nbsp;</a></div>
- <div id=icon4 class="moreicon" style="left:150px; top:62px;"><a href="/art"><img src="images\inkscape.png">
+ <div id=icon4 class="moreicon" style="left:135px; top:225px;"><a href="/art"><img src="images\inkscape.png">
   <br>&nbsp;TTRPG&nbsp;</a></div>
       
   <div id="update" class="window" style="width: 335px; height:178px; top:75px; left:200px; border:10px">
@@ -89,11 +154,11 @@ body {
          <img src="images/baby digimon.gif" width=327px height=157px>
           </div>
 
-<div id="about" class="window" style="left: 350px; top:-100px; width:600px;height:385px; padding:5px; overflow:hidden">
+<div id="about" class="window" style="left: 350px; top:-100px; width:600px;height:385px; padding:5px;">
   <div class="title-bar">
     <div class="title-bar-text">Welcome 2 My Twist3d M1nd</div>
   </div>
-   <div class="window-body" scrolling="auto" text-align="center">
+   <div class="window-body" scrolling="yes" text-align="center">
     <img src="/images/angewomon.png"> <img src="/images/holyangemon.png">
     <pre> 
     █  █▀  ▄▄▄▄▀ ▄▄▄▄▄   ▄█▄     ▄  █ ▀▄    ▄ 

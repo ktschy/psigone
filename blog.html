@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.4">
-    <!-- This is my blog page. will probably redirect to tinyletter -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☆ digital jean zone ☆</title>
     <link rel="icon" type="image/x-icon" href="/images/patamon.ico">
-  </head>
-  <body><br>
-    <h1 style="color:white">blag</h1>
-  <hr>
-    <p style="color:white"><a href="/blog/entry1.html">#1: [8.22.22] goodbyes in july</a></p>
-    <p style="color:white"><a href="/blog/entry2.html">#2: [4.27.23]five years in the bay</a></p>
-    <p style="color:white"><a href="/blog/entry3.html">#3: [6.13.23]the big kahuna</a></p>
-    <hr>
-    
-    <form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/robomotif" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/robomotif', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">subscribe to my email newsletter</label></p><input type="text" style="width:140px" name="email" id="tlemail" /><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></p></form>
-        
-  <p><a href="welcome.html">home</a></p></body>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blogstyle.css">
+    <script defer src="blog.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Left Navigation -->
+        <nav class="left-nav">
+            <a href="newhome.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Art</a>
+            <a href="#gallery">Zines</a>
+            <a href="#characters">D&D</a>
+        </nav>
+
+        <!-- Blog Content and Archive -->
+        <div class="main-content">
+            <!-- Main Blog Content -->
+            <main id="blog-post">
+                <!-- Blog posts will load dynamically -->
+            </main>
+
+            <!-- Archive -->
+            <aside class="archive">
+                <h2>Archive</h2>
+                <ul id="archive-list">
+                    <!-- Year groups and posts will load dynamically -->
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <p>Jean Zone © 2025. Powered by nostalgia!</p>
+    </footer>
+</body>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jean's character art</title>
+    <link href="/art.css" rel="stylesheet">
+    <script defer src="/art.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+        .mySlides img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .numbertext {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .next {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .column {
+            flex: 1 0 20%;
+            max-width: 120px;
+            margin: 5px;
+        }
+        .column img {
+            width: 100%;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .column img.active {
+            border: 2px solid #0078D7;
+        }
+        a {
+            color: #0078D7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Full-width images -->
+    <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/portfolio/image1.png" alt="Kierke">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/portfolio/image2.png" alt="Lars">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/portfolio/image3.png" alt="Panic">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/portfolio/image4.png" alt="Tiefling">
+    </div>
+
+    <!-- Next and Previous Buttons -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <!-- Thumbnail Images -->
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/portfolio/image1.png" alt="Kierke">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/portfolio/image2.png" alt="Lars">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/portfolio/image3.png" alt="Panic">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/portfolio/image4.png" alt="Tiefling">
+        </div>
+    </div>
+</div>
+
+<p style="text-align: center;">This page is a work in progress.<br><br>
+    <a href="splash.html">Back</a>
+</p>
+
+</body>
+</html>

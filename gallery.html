@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☆ digital jean zone ☆</title>
+    <link rel="icon" type="image/x-icon" href="/images/patamon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        /* Global Styling */
+        body {
+            font-family: "Press Start 2P", monospace;
+            background: linear-gradient(90deg, #3b5998, #8b9dc3);
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .page-container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+
+        /* Left Navigation */
+        nav.left-nav {
+            width: 80px;
+            background-color: #2e7d32;
+            padding: 10px 5px;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            flex-shrink: 0;
+        }
+
+        nav.left-nav a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 10px;
+            background: #1a237e;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 0.6rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav.left-nav a:hover {
+            background: #ffcc00;
+            color: #1a237e;
+            transform: scale(1.1);
+        }
+
+        /* Top Navigation */
+        nav.top-nav {
+            width: 100%;
+            background-color: #1a237e;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 60px; /* Adjusts to stay just below the banner */
+            z-index: 100;
+        }
+
+        nav.top-nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 8px 15px;
+            background: #2e7d32;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        nav.top-nav a:hover {
+            background: #ffcc00;
+            color: #1a237e;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        header {
+            background-color: #1a237e;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            color: #ffcc00;
+            border-bottom: 3px solid #ffcc00;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 0px #000000;
+        }
+
+        .section-heading {
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 0px #000000;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            border: 3px solid #ffcc00;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            height: 150px; /* Fixed height for uniform thumbnails */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 3px solid #ffcc00;
+            border-radius: 10px;
+            animation: pop-in 0.3s ease-in-out;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #ffffff;
+            text-decoration: none;
+            background: #ffcc00;
+            padding: 5px 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+
+        .close:hover {
+            background: #1a237e;
+            color: #ffcc00;
+        }
+
+        /* Pop-In Animation */
+        @keyframes pop-in {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1a237e;
+            color: #ffcc00;
+            font-size: 0.8rem;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Left Navigation -->
+        <nav class="left-nav">
+            <a href="newhome.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Art</a>
+            <a href="#gallery">Zines</a>
+            <a href="#characters">D&D</a>
+        </nav>
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                Jean Zone - Art Gallery
+            </header>
+
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <a href="#digital">Digital Art</a>
+                <a href="#traditional">Traditional Art</a>
+                <a href="#character">Character Art</a>
+            </nav>
+            
+            <!-- Digital Art Section -->
+            <h2 id="digital" class="section-heading">Digital Art</h2>
+            <div class="gallery-container">
+                <a href="#img-digital1" class="gallery-item">
+                    <img src="images/portfolio/image1.png" alt="Kierke">
+                </a>
+                <a href="#img-digital1" class="gallery-item">
+                    <img src="images/portfolio/image2.png" alt="Digital Art 1">
+                </a>
+                <a href="#img-digital1" class="gallery-item">
+                    <img src="images/portfolio/image3.png" alt="Digital Art 1">
+                </a>
+                <a href="#img-digital1" class="gallery-item">
+                    <img src="images/portfolio/image4.png" alt="Digital Art 1">
+                </a>
+            </div>
+
+            <!-- Traditional Art Section -->
+            <h2 id="traditional" class="section-heading">Traditional Art</h2>
+            <div class="gallery-container">
+                <a href="#img-traditional1" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Traditional Art 1">
+                </a>
+            </div>
+
+            <!-- Character Art Section -->
+            <h2 id="character" class="section-heading">Character Art</h2>
+            <div class="gallery-container">
+                <a href="#img-character1" class="gallery-item">
+                    <img src="https://via.placeholder.com/300x500" alt="Character Art 1">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Popups -->
+    <div id="img-digital1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="images/portfolio/image1.png" alt="Kierke">
+    </div>
+    <div id="img-traditional1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="https://via.placeholder.com/600x450" alt="Traditional Art 1">
+    </div>
+    <div id="img-character1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="https://via.placeholder.com/600x1000" alt="Character Art 1">
+    </div>
+
+    <footer>
+        <p>Jean Zone © 2025. <a href="index.html">Return to Home</a></p>
+    </footer>
+</body>
+</html>
